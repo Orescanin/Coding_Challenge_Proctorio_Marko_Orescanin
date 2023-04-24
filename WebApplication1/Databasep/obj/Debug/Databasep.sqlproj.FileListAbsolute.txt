@@ -1,0 +1,5 @@
+C:\Users\Korisnik\source\repos\WebApplication1\Databasep\bin\Debug\Databasep.dacpac
+C:\Users\Korisnik\source\repos\WebApplication1\Databasep\bin\Debug\Databasep.dll
+C:\Users\Korisnik\source\repos\WebApplication1\Databasep\bin\Debug\Databasep.pdb
+C:\Users\Korisnik\source\repos\WebApplication1\Databasep\obj\Debug\Databasep.dll
+C:\Users\Korisnik\source\repos\WebApplication1\Databasep\obj\Debug\Databasep.pdb

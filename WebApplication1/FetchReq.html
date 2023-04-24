@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GET Request Example</title>
+  </head>
+  <body>
+    <button id="fetch-button">Fetch Data</button>
+    <table id="data-table">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>PreviousSalary</th>
+          <th>ModificatoinDate</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <script>
+      const button = document.querySelector('#fetch-button');
+      const table = document.querySelector('#data-table tbody');
+      button.addEventListener('click', () => {
+        fetch('https://localhost:44343/getEmp')
+          .then(response => response.json())
+          .then(data => {
+            data.result.forEach(item => {
+              const row = table.insertRow();
+              row.insertCell().textContent = item.name;
+              row.insertCell().textContent = item.previousSalary;
+              row.insertCell().textContent = item.modificationDate;
+            });
+          })
+          .catch(error => console.error(error));
+      });
+    </script>
+  </body>
+</html>
