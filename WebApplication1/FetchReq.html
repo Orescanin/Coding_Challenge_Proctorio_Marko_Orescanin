@@ -20,10 +20,13 @@
       const button = document.querySelector('#fetch-button');
       const table = document.querySelector('#data-table tbody');
       button.addEventListener('click', () => {
+          while (table.firstChild) {
+          table.removeChild(table.firstChild);
+        }
         fetch('https://localhost:44343/getEmp')
           .then(response => response.json())
           .then(data => {
-            data.result.forEach(item => {
+            data.forEach(item => {
               const row = table.insertRow();
               row.insertCell().textContent = item.name;
               row.insertCell().textContent = item.previousSalary;
